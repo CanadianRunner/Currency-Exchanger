@@ -1,0 +1,24 @@
+{
+  "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jquery": true,
+    "node": true
+  },
+  "rules": {
+      "semi": 1,
+      "indent": ["warn", 2],
+      "no-debugger": "warn" 
+  }
+}
+// 0 = No error, 1 = warn, 2 = error.
+
+//(If you need to disable eslint) 
+/* eslint-disable no-debugger */
+// debugger;
+/* eslint-enable no-debugger */
