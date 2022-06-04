@@ -21,9 +21,16 @@ $(document).ready(function(){
     let value = $('#currency-amount').val();
     let startingCurrency = $('#first-currency').val();
     let convertedCurrency = $('#second-currency').val();
+    const swapButton = document.getElementById('swap-button')
     currencyExchangeRate.currentRate(convertedCurrency, startingCurrency, value)
     .then(function(response) {
       submitResults(response);
     });
+    swapButton.addEventListener('click', () => {
+      const swapCurrency = startingCurrency.value;
+       startingCurrency.value = convertedCurrency.value;
+       convertedCurrency.value = swapCurrency;
+       calculate();
+    })
   })
 });
