@@ -1,4 +1,4 @@
-import { CurrencyExchangeRate } from './js/currency-exchange';
+import { currencyExchangeRate } from './js/currency-exchange';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,12 @@ function submitResults(response) {
 $(document).ready(function(){
   $('#submit').click(function(event) {
     event.preventDefault();
-    let value = $('#')
+    let value = $('#currency-amount').val();
+    let startingCurrency = $('#first-currency').val();
+    let convertedCurrency = $('#second-currency').val();
+    currencyExchangeRate.currentRate(convertedCurrency, startingCurrency, value)
+    .then(function(response) {
+      submitResults(response);
+    });
   })
 });
