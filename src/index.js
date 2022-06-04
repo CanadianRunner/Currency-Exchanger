@@ -22,19 +22,20 @@ function submitResults(response) {
 $(document).ready(function () {
   $("#submit").click(function (event) {
     event.preventDefault();
-    let value = $("#currency-amount").val();
+    let value = $("#number-one").val();
     let startingCurrency = $("#first-currency").val();
     let convertedCurrency = $("#second-currency").val();
-    // const swapButton = document.getElementById("swap-button");
     currencyExchangeRate
       .currentRate(convertedCurrency, startingCurrency, value)
       .then(function (response) {
         submitResults(response);
       });
-    // swapButton.addEventListener('click', () => {
-    //   const swapCurrency = startingCurrency.value;
-    //    startingCurrency.value = convertedCurrency.value;
-    //    convertedCurrency.value = swapCurrency;
-    //    calculate();
   });
+  $('#swap-button').click(function (event) {
+    event.preventDefault();
+    let submitSelect = $('#first-currency').val();
+    $('#first-currency').val() = $('#second-currency').val();
+    $('#second-currency').val() = submitSelect;
+
+  })
 });
