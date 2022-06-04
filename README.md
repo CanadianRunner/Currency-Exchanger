@@ -1,4 +1,4 @@
-# _Super Galactic Age Calculator_
+# _Currency Exchanger_
 
 #### By _**Sean Keane**_
 
