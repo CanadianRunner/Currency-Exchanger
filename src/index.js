@@ -6,10 +6,18 @@ import './css/styles.css';
 
 function submitResults(response) {
   if(response.result === 'success') {
-    $('#exchange-value').text(`Your ${response.}`)
+    $('#exchange-value').text(`Your ${response.base_code} worth ${response.conversion_result} ${response.target_code}`);
+    $('#exchange-rate').text(`The exchange rate is ${response.conversion_rate}`);
+  }
+  else {
+    if(response instanceof Error) {
+   return $('#inputted-error').text(`There was an error with this conversion: ${response.message}`);
   }
 }
 
 $(document).ready(function(){
-
+  $('#submit').click(function(event) {
+    event.preventDefault();
+    let value = $('#')
+  })
 });
