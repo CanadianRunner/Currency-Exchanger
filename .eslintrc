@@ -16,9 +16,3 @@
       "no-debugger": "warn" 
   }
 }
-// 0 = No error, 1 = warn, 2 = error.
-
-//(If you need to disable eslint) 
-/* eslint-disable no-debugger */
-// debugger;
-/* eslint-enable no-debugger */

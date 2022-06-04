@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.slim.js"
-  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-  crossorigin="anonymous"></script>
-  <title>Currency Exchanger</title>
-</head>
-<body>
-  <br>
-  <img src="img/coins.jpg" class="coins-image"/>
-  <h1>Exchange Rate Calculator</h1>
-  <p>Please choose your currencies and enter an amount.  We will get you an up to date exchange rate!</p>
-  <div class="container">
-    <div class="currencies">
-      <select id="first-currency">
-      <option value="USD" selected>USD</option>
-      <option value="CAD">CAD</option>
-      <option value="EUR">EUR</option>
-      <option value="AUD">AUD</option>
-      <option value="JPY">JPY</option>
-      <option value="MXN">MXN</option>
-    </select>
-    <input type="number" id="number-one" placeholder="0" value="1"/>
-    </div>
-
-    <br>
-    <div class="submit">
-      <button type="button" class="btn btn-secondary">Submit</button>
-    </div>
-    
-    <div class="swap-currencies">
-      <button type="button" class="btn btn-dark" id="swap-button">Swap Currencies</button>
-
-      </div>
-      <br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"
+    ></script>
+    <title>Currency Exchanger</title>
+  </head>
+  <body>
+    <br />
+    <img src="img/coins.jpg" class="coins-image" />
+    <h1>Exchange Rate Calculator</h1>
+    <p>
+      Please choose your currencies and enter an amount. We will get you an up
+      to date exchange rate!
+    </p>
+    <div class="container">
       <div class="currencies">
         <select id="first-currency">
-        <option value="USD">USD</option>
-        <option value="CAD" selected>CAD</option>
-        <option value="EUR">EUR</option>
-        <option value="AUD">AUD</option>
-        <option value="JPY">JPY</option>
-        <option value="MXN">MXN</option>
-      </select>
-      <input type="number" id="number-two" placeholder="0"/>
+          <option value="USD" selected>USD</option>
+          <option value="CAD">CAD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="JPY">JPY</option>
+          <option value="MXN">MXN</option>
+        </select>
+        <input type="number" id="number-one" placeholder="0" value="1" />
+      </div>
+
+      <br />
+      <div class="submit">
+        <button type="button" class="btn btn-secondary">Submit</button>
+      </div>
+
+      <div class="swap-currencies">
+        <button type="button" class="btn btn-dark" id="swap-button">
+          Swap Currencies
+        </button>
+      </div>
+      <br />
+      <div class="currencies">
+        <select id="first-currency">
+          <option value="USD">USD</option>
+          <option value="CAD" selected>CAD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="JPY">JPY</option>
+          <option value="MXN">MXN</option>
+        </select>
+        <input type="number" id="number-two" placeholder="0" />
+        <h3>Exchange Value</h3>
+        <p id="exchange-value"></p>
+        <br />
+        <h3>Exchange Rate</h3>
+        <p id="exchange-rate"></p>
+      </div>
+      <div class="errors">
+        <p id="inputted-error"></p>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

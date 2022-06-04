@@ -4,6 +4,11 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
+function submitResults(response) {
+  if(response.result === 'success') {
+    $('#exchange-value').text(`Your ${response.}`)
+  }
+}
 
 $(document).ready(function(){
 
