@@ -31,11 +31,10 @@ $(document).ready(function () {
         submitResults(response);
       });
   });
-  $('#swap-button').click(function (event) {
+  $("#swap-button").click(function (event) {
     event.preventDefault();
-    let submitSelect = $('#first-currency').val();
-    $('#first-currency').val() = $('#second-currency').val();
-    $('#second-currency').val() = submitSelect;
-
-  })
+    let submitSelect = $("#first-currency").val();
+    $("#first-currency").val($("#second-currency").val());
+    $("#second-currency").val(submitSelect);
+  });
 });
