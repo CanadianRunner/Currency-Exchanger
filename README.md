@@ -15,7 +15,7 @@
 * Markdown
 
 ## Description
-_This is a project I created at Epicodus that allows a user to get a live exchange rate on six different currencies.  The user can submit their currency amount and receive the exchange value and exchange rate.  Additionally the user has the ability to swap currencies.  Developing this application helped grow my understanding of API's and Asynchronous code. This project represents my ability to navigate HTML, CSS, Markdown, JavaScript/jQuery, API's, and Github._
+_This is a project I created at Epicodus that allows a user to get a live exchange rate on over fifty different currencies.  The user can submit their currency amount and receive the exchange value and exchange rate.  Additionally the user has the ability to swap currencies.  Developing this application helped grow my understanding of API's and Asynchronous code. This project represents my ability to navigate HTML, CSS, Markdown, JavaScript/jQuery, API's, and Github._
 
 ## Setup/Installation Requirements
 
