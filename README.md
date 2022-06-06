@@ -23,7 +23,7 @@ _This is a project I created at Epicodus that allows a user to get a live exchan
 2) Navigate to the now installed directory and open in your editor of choice.
 3) Create a .env file in the root directory of your cloned project.  You will store your personal API key in the .env.  *This step is very important, the application will not work without your API key, as the .env file has been added to the .gitignore.
 4) Navigate to [ExchangeRate-API](https://www.exchangerate-api.com/) and create a free API key (no payment necessary).
-5)Copy and paste your free API key into the .env file
+5) Copy and paste your free API key into the .env file
 6) Open the directory in your terminal and run `$npm install`.
 7) Once your terminal indicates the install is complete, run `$ npm run build`.
 8) When you're ready to view the a live server of the project run `$ npm run start`.
