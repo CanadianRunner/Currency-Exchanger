@@ -6,8 +6,7 @@ export class currencyExchangeRate {
       );
       if (!response.ok) {
         console.log(response);
-        return await response.json();
-        // throw Error(response.status);
+        return await response;
       }
       return await response.json();
     } catch (error) {

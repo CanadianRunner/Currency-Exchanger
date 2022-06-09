@@ -5,7 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 
 function submitResults(response) {
-  // console.log(response);
+  console.log(response);
+  if ('status' in response){
+    $("#currency-fail").text(
+      `There was a problem with this currency call: ${response.status} error`
+    );
+  }
   if (response.result === "success") {
     $("#exchange-value").text(
       `Your ${response.base_code} worth ${response.conversion_result} ${response.target_code}`
@@ -13,17 +18,12 @@ function submitResults(response) {
     $("#exchange-rate").text(
       `The exchange rate is ${response.conversion_rate}`
     );
-    if (response.result == "error") {
-      $("api-fail").text(
-        `There was an error.  Resource not found: ${response.status}`
+    if (response.result === "error") {
+      $("#api-fail").text(
+        `There was a problem.  Resource not found: ${response.error_type} error`
       );
     }
-  } else if (response instanceof Error) {
-    $("#inputted-error").text(
-      `Please enter a positive number: ${response.status}`
-    );
   }
-  
 }
 
 $(document).ready(function () {
